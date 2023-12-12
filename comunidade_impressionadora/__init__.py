@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'dec2473a6bca9f423cbc3d27573a6a80'
 
-if os.getenv('DATABASE_URL'):
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+if os.getenv('DATABASE_PRIVATE_URL'):
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_PRIVATE_URL')
 else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///comunidade.db'
 
