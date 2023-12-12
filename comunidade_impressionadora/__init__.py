@@ -29,7 +29,7 @@ if not inspector.has_table("usuario"):
     with app.app_context():
         database.drop_all()
         database.create_all()
-        print('BAse de dados criada')
+        print('Base de dados criada')
 else:
     print('Base de dados já existente')
 
